@@ -10,6 +10,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PagesModule } from './pages/pages.module';
 import { LoginComponent } from './login/login.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +27,8 @@ import { LoginComponent } from './login/login.component';
     
     BrowserModule,
     PagesModule,
+    HttpClientModule,
+    CommonModule,     //Para los ngFor, ngIF, etc
   ],
   providers: [],
   bootstrap: [AppComponent]

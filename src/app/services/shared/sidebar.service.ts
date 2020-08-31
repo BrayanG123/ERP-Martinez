@@ -15,31 +15,49 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Usuarios (hacer)',
+      titulo: 'Usuarios (pendiente)',
       icono: 'fa fa-user nav-icon',
       submenu: [
         { titulo: 'Dashboard', url: '/dashboard' },
         { titulo: 'Usuarios', url: '/usuarios' },
       ]
     },
+    
     {
-      titulo: 'Compras (hacer)',
+      titulo: 'Compras',   //<------------------ AQUI
       icono: 'fa fa-shopping-cart nav-icon',
       submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
+        { titulo: '(hacer)', url: '/compras' },
+        { titulo: 'nuevo', url: '/comprasnuevo' },
       ]
     },
     {
-      titulo: 'Productos (hacer)',
+      titulo: 'Proveedores', //<------------------ AQUI
+      icono: 'fa fa-truck-moving nav-icon',
+      submenu: [
+        { titulo: 'proveedores', url: '/proveedores' },
+        { titulo: 'nuevo', url: '/proveedorcrear' },
+      ]
+    },
+    {
+      titulo: 'Categorias', //<------------------ AQUI
+      icono: 'fa fa-truck-moving nav-icon',
+      submenu: [
+        { titulo: 'categorias', url: '/categorias' },
+        { titulo: 'nuevo', url: '/categorianuevo' },
+      ]
+    },
+
+    {
+      titulo: 'Productos',
       icono: 'fa fa-capsules nav-icon',
       submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
+        { titulo: 'productos', url: '/producto' },
+        { titulo: 'nuevo', url: '/productonuevo' },
       ]
     },
     {
-      titulo: 'Clientes (hacer)',
+      titulo: 'Clientes (pendiente)',
       icono: 'fa fa-handshake nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
@@ -47,7 +65,7 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Empleados (hacer)',
+      titulo: 'Empleados (pendiente)',
       icono: 'fa fa-id-card-alt nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
@@ -55,15 +73,7 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Proveedores (hacer)',
-      icono: 'fa fa-truck-moving nav-icon',
-      submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
-      ]
-    },
-    {
-      titulo: 'Ventas (hacer)',
+      titulo: 'Ventas (pendiente)',
       icono: 'fa fa-cash-register nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
@@ -71,7 +81,7 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Reportes (hacer)',
+      titulo: 'Reportes (pendiente)',
       icono: 'fa fa-file-invoice-dollar nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
@@ -79,7 +89,7 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Configuraciones (hacer)',
+      titulo: 'Config (pendiente)',
       icono: 'fa fa-wrench nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },

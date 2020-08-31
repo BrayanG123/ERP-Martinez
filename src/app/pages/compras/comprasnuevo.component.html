@@ -1,0 +1,144 @@
+<!-- <div class="row animated fadeIn">
+    <div class="col-lg-6">
+        <div class="card">
+
+            <div class="card-body">
+
+                <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar(f.value)" class="form p-t-20">
+                    <div class="form-group">
+                        <label for="exampleInputuname">Id Proveedor</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input [ngModel]="compra.provider_id" name="provider" type="text" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Id Deposito</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input [ngModel]="compra.deposit_id" name="deposit" type="text" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail">Productos: </label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input [ngModel]="compra.products" name="products" type="text" class="form-control" placeholder="Id" required>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input [ngModel]="compra.products" name="products" type="text" class="form-control" placeholder="Cantidad" required>
+                        </div>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-block btn-success waves-effect waves-light m-r-10">
+                        <i class="fa fa-save"></i>
+                        Guardar
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- Con el modo Reactivo -->
+
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()" class="col-8">
+
+    <div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Id Proveedor</label>
+        <div class="col">
+          <input class="form-control"
+                 type="number"
+                 placeholder="Id Proveedor"
+                 formControlName="idproveedor"
+                 >
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Id Deposito</label>
+        <div class="col">
+          <input class="form-control"
+                 type="number"
+                 placeholder="Id Deposito"
+                 formControlName="iddeposito"
+                 >
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="row">
+
+      <div class="col">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>#</th>
+              <th>Id Producto</th>
+              <th>Cantidad</th>
+              <th>Borrar</th>
+            </tr>
+          </thead>
+          <tbody formArrayName="productos">
+            <tr *ngFor="let control of productos.controls; let i=index">
+              <td> {{ i+1 }} </td>
+
+              <td>
+                <input class="form-control"
+                        type="number"
+                        [formControlName]="i">
+              </td>
+              <td>
+                <input class="form-control"
+                        type="number"
+                        [formControlName]="i">
+              </td>
+
+              <td>
+                <button class="btn btn-danger"
+                        type="button"
+                        (click)="borrarProducto(i)">
+                  Borrar
+                </button>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+  
+        <button class="btn btn-primary mt-3 mb-5 btn-block"
+                type="button"
+                (click)="agregarProducto()">
+          + Agregar Producto 
+        </button>
+      </div>
+
+    </div>
+  
+    <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Guardar
+        </button>
+      </div>
+    </div>
+  
+</form>
+  
+
+<pre>
+    Estado del formulario: {{ forma.valid }}
+    <br>
+    Status: {{ forma.status }}
+  </pre>
+  
+  <pre>
+    {{ forma.value | json }}
+  </pre>
