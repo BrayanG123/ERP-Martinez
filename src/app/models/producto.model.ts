@@ -6,7 +6,7 @@ export class Producto {
         public precio: string,
         public costo: string,
         public descripcion: string,
-        public _id?: number
+        public id?: number
     ) { }
 
 }

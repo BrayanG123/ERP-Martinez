@@ -6,27 +6,27 @@
     <div class="card">
       <div class="card-body">
   
-        <h3 class="card-title"> Proveedores Registrados ( <small>x</small> )</h3>
+        <h3 class="card-title"> Compras Realizadas ( <small>x</small> )</h3>
       
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Empresa</th>
-              <th>Direccion</th>
-              <th>Telefono</th>
-              <th>Botones</th>
+              <th>ID Compra</th>
+              <th>Costo Total</th>
+              <th>Productos</th>
             </tr>
           </thead>
   
           <tbody>
-            <tr>
-              <td>Imagen</td>
-              <td>Email</td>
-              <td>Nombre</td>
-              <td>Role</td>
+            <tr *ngFor="let compra of compras">
+                <td>
+                    {{ compra.id }}
+                </td>
+              <td> {{ compra.costoTotal }} </td>
+              <td> {{ compra.products }} </td>
               <td>
                 <button class="btn btn-primary">
-                  <i class="fa fa-save"></i>
+                  <i class="fa fa-eye"></i>
                 </button>
                 <button class="btn btn-danger">
                   <i class="fa fa-trash"></i>

@@ -27,7 +27,7 @@ export class SidebarService {
       titulo: 'Compras',   //<------------------ AQUI
       icono: 'fa fa-shopping-cart nav-icon',
       submenu: [
-        { titulo: '(hacer)', url: '/compras' },
+        { titulo: 'compras', url: '/compras' },
         { titulo: 'nuevo', url: '/comprasnuevo' },
       ]
     },
@@ -96,6 +96,13 @@ export class SidebarService {
         { titulo: 'hacer', url: '/dashboard' },
       ]
     },
+    // {
+    //   titulo: 'Cerrar Sesion',
+    //   icono: 'fa fa-wrench nav-icon',
+    //   submenu: [
+    //     { titulo: 'Logout', url: '/login' },
+    //   ]
+    // },
 
   ];
 

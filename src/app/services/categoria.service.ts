@@ -9,17 +9,21 @@ import { map } from 'rxjs/operators';
 })
 export class CategoriaService {
 
+  public categorias: Categoria[] = [];//para el obtener categoria
+
   constructor( public http:HttpClient,
     
   ) { }
 
-
+  //--------------------- GET ----------------------------
   cargarCategorias(){
     let url = URL_SERVICIOS + '/categories';
     
     return this.http.get( url );
   }
 
+
+  //--------------------- POST -----------------------------
   crearCategoria( categoria: Categoria ){
     let url = URL_SERVICIOS + '/category';
     
@@ -32,5 +36,39 @@ export class CategoriaService {
         }));
   }
 
+  //--------------------- PUT -----------------------------
+  editarCategoria( categoria: Categoria ){
+    // let url = URL_SERVICIOS + '/category' + `/${categoria._id}`;
+    
+    // return this.http.put( url, categoria );
+          
+  }
+
+  //--------------------- DELETE -----------------------------
+  borrarCategoria(){
+    let url = URL_SERVICIOS + '/category';
+
+    // return this.http.delete(url, )
+  }
+
+  
+
+  // ObtenerCategoria(id:number){
+  //   this.cargarCategorias()
+  //       .subscribe((categorias:any) => {
+  //         // console.log(categorias);
+  //         this.categorias = categorias;
+
+  //       } ) 
+
+  //   return this.extraerCategoria( this.categorias, id );
+  // }
+
+  // extraerCategoria( categorias, id ){
+  //   for (let i = 0; i < categorias.length; i++) {
+  //     if ( id == categorias[i].id ) return categorias[i];
+  //   }
+  //   return null;
+  // }
 
 }

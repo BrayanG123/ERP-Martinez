@@ -23,14 +23,15 @@ export class ProductoService {
     let url = URL_SERVICIOS + '/product';
     
     console.log('producto.servie: ', producto);
-    return this.http.post( url, {
-            'category_id': producto.category_id,
-            'nombre': producto.nombre,
-            'descripcion': producto.descripcion,
-            'precio': producto.precio, 
-            'costo': producto.costo 
-    } )
-        .pipe( map((resp: any) => {
+    return this.http.post( url, producto
+    //   {
+    //         'category_id': producto.category_id,
+    //         'nombre': producto.nombre,
+    //         'descripcion': producto.descripcion,
+    //         'precio': producto.precio, 
+    //         'costo': producto.costo 
+    // }
+     ).pipe( map((resp: any) => {
           console.log(resp);
         
         }));

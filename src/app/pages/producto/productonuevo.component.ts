@@ -3,6 +3,7 @@ import { Producto } from 'src/app/models/producto.model';
 import { ProductoService } from 'src/app/services/producto.service';
 import { Categoria } from 'src/app/models/categoria.model';
 import { CategoriaService } from 'src/app/services/categoria.service';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-productonuevo',
@@ -13,17 +14,33 @@ export class ProductonuevoComponent implements OnInit {
 
   categorias: Categoria[] = [];
   producto: Producto = new Producto( null, '', '', '', '' );
+  categoria: Categoria = new Categoria('','');
 
-  constructor( public _productoService: ProductoService,
+
+  public productoForm: FormGroup;
+
+  constructor( private fb: FormBuilder,
+               public _productoService: ProductoService,
                public _categoriaService: CategoriaService  
   ) { }
 
   ngOnInit(): void {
+
+    this.productoForm = this.fb.group({
+      categoria: ['', Validators.required],
+      nombre: ['', Validators.required],
+      descripcion: ['', Validators.required],
+      precio: ['', Validators.required],
+      costo: ['', Validators.required],
+
+    });
+
+    //para tener listas las categorias al inciar el componente producto
+    this.cargarCategorias();
+
   }
 
   guardar( producto: Producto ){
-
-    this.producto.category_id = producto.category_id;
     this.producto.nombre = producto.nombre;
     this.producto.descripcion = producto.descripcion;
     this.producto.precio = producto.precio;
@@ -37,9 +54,16 @@ export class ProductonuevoComponent implements OnInit {
         } );
   }
 
-  // cambioCategoria( id:string ){
-  //   this._hospitalService.obtenerHospital( id )
-  //           .subscribe( hospital => this.hospital = hospital );
-  // }
+  cargarCategorias(){
+    this._categoriaService.cargarCategorias() 
+          .subscribe( (categorias: Categoria[]) => {
+            this.categorias = categorias;
+            // console.log(this.categorias);
+          } );
+  }
+  cambioCategoria( id:number ){
+    this.producto.category_id = id;
+  }
+
 
 }
