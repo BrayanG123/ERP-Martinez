@@ -23,6 +23,19 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CategorianuevoComponent } from './categoria/categorianuevo.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ProductonuevoComponent } from './producto/productonuevo.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { ProveeditComponent } from './proveedores/proveedit.component';
+import { CategeditarComponent } from './categoria/categeditar.component';
+import { ProductoeditComponent } from './producto/productoedit.component';
+import { AlmacenComponent } from './almacen/almacen.component';
+import { AlmaceneditComponent } from './almacen/almacenedit.component';
+import { AlmacennuevoComponent } from './almacen/almacennuevo.component';
+import { DptoComponent } from './dpto/dpto.component';
+import { DptoeditComponent } from './dpto/dptoedit.component';
+import { DptonuevoComponent } from './dpto/dptonuevo.component';
+import { SucursalComponent } from './sucursal/sucursal.component';
+import { SucursalnuevoComponent } from './sucursal/sucursalnuevo.component';
+import { SucursaleditComponent } from './sucursal/sucursaledit.component';
 
 
 
@@ -40,6 +53,19 @@ import { ProductonuevoComponent } from './producto/productonuevo.component';
         CategorianuevoComponent,
         ProductoComponent,
         ProductonuevoComponent,
+        AccountSettingsComponent,
+        ProveeditComponent,
+        CategeditarComponent,
+        ProductoeditComponent,
+        AlmacenComponent,
+        AlmaceneditComponent,
+        AlmacennuevoComponent,
+        DptoComponent,
+        DptoeditComponent,
+        DptonuevoComponent,
+        SucursalComponent,
+        SucursalnuevoComponent,
+        SucursaleditComponent,
     ],
     imports: [
         SharedModule,

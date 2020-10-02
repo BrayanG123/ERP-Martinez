@@ -4,7 +4,7 @@ export class Proveedor {
         public empresa: string,
         public direccion: string,
         public telefono: string,
-        public _id?: string
+        public id?: string
     ) { }
 
 }

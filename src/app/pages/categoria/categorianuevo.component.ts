@@ -25,7 +25,7 @@ export class CategorianuevoComponent implements OnInit {
 
     this._categoriaService.crearCategoria( this.categoria )
         .subscribe( categoria => {
-          console.log(categoria);
+          // console.log(categoria);
         } );
   }
 

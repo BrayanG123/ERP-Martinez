@@ -1,4 +1,18 @@
-<div class="col-12">
+<div class="row animated fadeIn" *ngIf="cargando">
+
+  <div class="col-sm-12">
+      <div class="alert-warning text-center">
+          <strong>Cargando</strong>
+          <br>
+          <i class="fa fa-refresh fa-spin fa-2x"></i>
+          <br>
+          <span>Espere por favor</span>
+      </div>
+  </div>
+
+</div>
+
+<div class="col-12" *ngIf="!cargando">
 
     <div class="card">
       <div class="card-body">
@@ -21,10 +35,10 @@
                 <td> {{ producto.precio }} </td>
                 <td> {{ producto.costo }} </td>
                 <td>
-                    <button class="btn btn-primary">
+                    <button (click)="editarProducto(producto)" class="btn btn-primary">
                       <i class="fa fa-edit"></i>
                     </button>
-                    <button class="btn btn-danger">
+                    <button (click)="borrarProducto(producto)" class="btn btn-danger">
                       <i class="fa fa-trash"></i>
                     </button>
                 </td>

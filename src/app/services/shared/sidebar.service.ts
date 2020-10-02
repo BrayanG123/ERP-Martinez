@@ -6,16 +6,16 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
 
   menu: any = [
+    // {
+    //   titulo: 'Inicio',
+    //   icono: 'fa fa-home nav-icon',
+    //   submenu: [
+    //     { titulo: 'hacer', url: '/dashboard' },
+    //     { titulo: 'hacer', url: '/dashboard' },
+    //   ]
+    // },
     {
-      titulo: 'Inicio',
-      icono: 'fa fa-home nav-icon',
-      submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
-      ]
-    },
-    {
-      titulo: 'Usuarios (pendiente)',
+      titulo: 'Usuarios',
       icono: 'fa fa-user nav-icon',
       submenu: [
         { titulo: 'Dashboard', url: '/dashboard' },
@@ -33,7 +33,7 @@ export class SidebarService {
     },
     {
       titulo: 'Proveedores', //<------------------ AQUI
-      icono: 'fa fa-truck-moving nav-icon',
+      icono: 'fa fa-truck nav-icon',
       submenu: [
         { titulo: 'proveedores', url: '/proveedores' },
         { titulo: 'nuevo', url: '/proveedorcrear' },
@@ -41,7 +41,7 @@ export class SidebarService {
     },
     {
       titulo: 'Categorias', //<------------------ AQUI
-      icono: 'fa fa-truck-moving nav-icon',
+      icono: 'fas fa-truck-moving nav-icon',
       submenu: [
         { titulo: 'categorias', url: '/categorias' },
         { titulo: 'nuevo', url: '/categorianuevo' },
@@ -50,50 +50,73 @@ export class SidebarService {
 
     {
       titulo: 'Productos',
-      icono: 'fa fa-capsules nav-icon',
+      icono: 'fas fa-capsules nav-icon',
       submenu: [
         { titulo: 'productos', url: '/producto' },
         { titulo: 'nuevo', url: '/productonuevo' },
       ]
     },
     {
-      titulo: 'Clientes (pendiente)',
-      icono: 'fa fa-handshake nav-icon',
+      titulo: 'Clientes',
+      icono: 'fas fa-handshake nav-icon',
+      submenu: [
+        { titulo: 'Clientes', url: '/clientes' },
+        { titulo: 'Nuevo', url: '/clientes-nuevo' },
+      ]
+    },
+    {
+      titulo: 'Empleados',
+      icono: 'fas fa-id-card-alt nav-icon',
+      submenu: [
+        { titulo: 'Empleados', url: '/empleados' },
+        { titulo: 'Nuevo', url: '/empleados-nuevo' },
+      ]
+    },
+    {
+      titulo: 'Ventas',
+      icono: 'fas fa-cash-register nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
         { titulo: 'hacer', url: '/dashboard' },
       ]
     },
     {
-      titulo: 'Empleados (pendiente)',
-      icono: 'fa fa-id-card-alt nav-icon',
+      titulo: 'Reportes',
+      icono: 'fas fa-file-invoice-dollar nav-icon',
       submenu: [
         { titulo: 'hacer', url: '/dashboard' },
         { titulo: 'hacer', url: '/dashboard' },
       ]
     },
     {
-      titulo: 'Ventas (pendiente)',
-      icono: 'fa fa-cash-register nav-icon',
+      titulo: 'Almacenes',
+      icono: 'fas fa-store nav-icon',
       submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
+        { titulo: 'almacenes', url: '/almacenes' },
+        { titulo: 'nuevo', url: '/almacenes-nuevo' },
       ]
     },
     {
-      titulo: 'Reportes (pendiente)',
-      icono: 'fa fa-file-invoice-dollar nav-icon',
+      titulo: 'Departamentos',
+      icono: 'fas fa-store nav-icon',
       submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
+        { titulo: 'departamentos', url: '/dptos' },
+        { titulo: 'nuevo', url: '/dptos-nuevo' },
       ]
     },
     {
-      titulo: 'Config (pendiente)',
+      titulo: 'Sucursales',
+      icono: 'fas fa-store nav-icon',
+      submenu: [
+        { titulo: 'Sucursales', url: '/sucursales' },
+        { titulo: 'nuevo', url: '/sucursales-nuevo' },
+      ]
+    },
+    {
+      titulo: 'Config',
       icono: 'fa fa-wrench nav-icon',
       submenu: [
-        { titulo: 'hacer', url: '/dashboard' },
-        { titulo: 'hacer', url: '/dashboard' },
+        { titulo: 'configuracion', url: '/account-settings' },
       ]
     },
     // {

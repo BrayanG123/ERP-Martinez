@@ -46,11 +46,11 @@ export class ProductonuevoComponent implements OnInit {
     this.producto.precio = producto.precio;
     this.producto.costo = producto.costo;
     
-    console.log('producto.ts: ', this.producto);
+    // console.log('producto.ts: ', this.producto);
 
     this._productoService.crearProducto( this.producto )
         .subscribe( producto => {
-          console.log(producto);
+          // console.log(producto);
         } );
   }
 

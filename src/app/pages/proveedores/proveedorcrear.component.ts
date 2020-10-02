@@ -46,7 +46,7 @@ export class ProveedorcrearComponent implements OnInit {
     this.proveedor.direccion = proveedor.direccion;
     this.proveedor.telefono = proveedor.telefono;
     
-    console.log('proveedor.ts: ', this.proveedor);
+    // console.log('proveedor.ts: ', this.proveedor);
 
     this._proveedorService.crearProveedor( this.proveedor )
         .subscribe( proveedor => {
