@@ -6,7 +6,7 @@ export class Compra {
         public provider_id: number,
         public deposit_id: number,
         public products: Compraprod[],
-        public _id?: string
+        public id?: string
     ) { }
 
 }

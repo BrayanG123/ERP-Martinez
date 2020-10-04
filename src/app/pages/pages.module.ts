@@ -36,6 +36,8 @@ import { DptonuevoComponent } from './dpto/dptonuevo.component';
 import { SucursalComponent } from './sucursal/sucursal.component';
 import { SucursalnuevoComponent } from './sucursal/sucursalnuevo.component';
 import { SucursaleditComponent } from './sucursal/sucursaledit.component';
+import { CompraverComponent } from './compras/compraver.component';
+import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
 
 
 
@@ -66,6 +68,8 @@ import { SucursaleditComponent } from './sucursal/sucursaledit.component';
         SucursalComponent,
         SucursalnuevoComponent,
         SucursaleditComponent,
+        CompraverComponent,
+        UsuarioNuevoComponent,
     ],
     imports: [
         SharedModule,

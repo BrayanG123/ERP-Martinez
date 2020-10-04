@@ -11,6 +11,13 @@ export class Usuario {
     ){
         
     }
-
+    
+    // "ci":"47D31d",
+    // "nombre":"Michael",
+    // "apellido":"Bolton",
+    // "sexo":"M",
+    // "rol_id":1,
+    // "departament_id":1,
+    // "email":"copitas1@yopmail.com"
 
 }

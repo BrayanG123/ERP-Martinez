@@ -29,6 +29,7 @@ export class ProductoComponent implements OnInit {
         .subscribe( (productos:any) => {
           // console.log(productos);
           this.productos = productos;
+          console.log(this.productos);
           this.cargando = false;
         } ) 
   }

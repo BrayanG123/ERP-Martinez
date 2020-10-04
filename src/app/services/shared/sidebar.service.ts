@@ -18,8 +18,8 @@ export class SidebarService {
       titulo: 'Usuarios',
       icono: 'fa fa-user nav-icon',
       submenu: [
-        { titulo: 'Dashboard', url: '/dashboard' },
         { titulo: 'Usuarios', url: '/usuarios' },
+        { titulo: 'Nuevo', url: '/usuarios-nuevo' },
       ]
     },
     
@@ -108,8 +108,8 @@ export class SidebarService {
       titulo: 'Sucursales',
       icono: 'fas fa-store nav-icon',
       submenu: [
-        { titulo: 'Sucursales', url: '/sucursales' },
-        { titulo: 'nuevo', url: '/sucursales-nuevo' },
+        { titulo: 'Sucursales', url: '/sucursal' },
+        { titulo: 'nuevo', url: '/sucursal-nuevo' },
       ]
     },
     {

@@ -17,31 +17,32 @@
       <div class="card">
         <div class="card-body">
     
-          <h3 class="card-title"> Sucursales </h3>
+          <h3 class="card-title"> Almacenes </h3>
         
           <table class="table table-hover">
             <thead>
               <tr>
-                <th>Ubicacion</th>
-                <th>ID Oficina</th>
-                <!-- <th>Costo</th> -->
-                <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Costo por unidad</th>
+                <th>Cantidad</th>
+                <!-- <th>Total</th> -->
               </tr>
             </thead>
     
             <tbody>
-              <tr *ngFor="let sucursal of sucursales">
-                  <td> {{ sucursal.nombre }}</td>
-                  <td> {{ sucursal.city_id }} </td>
-                  <!-- <td> {{ sucursal }} </td> -->
-                  <td>
-                      <button (click)="editarSucursal(sucursal)" class="btn btn-primary">
+              <tr *ngFor="let producto of compra.productos">
+                  <td> {{ producto.nombre }}</td>
+                  <td> {{ producto.costo_por_unidad }} </td>
+                  <td> {{ producto.cantidad }} </td>
+                  <!-- <td> {{ compra.cantidad * produc.costo_por_unidad }} </td> -->
+                  <!-- <td>
+                      <button (click)="editarProducto(producto)" class="btn btn-primary">
                         <i class="fa fa-edit"></i>
                       </button>
-                      <button (click)="borrarSucursal(sucursal)" class="btn btn-danger">
+                      <button (click)="borrarProducto(producto)" class="btn btn-danger">
                         <i class="fa fa-trash"></i>
                       </button>
-                  </td>
+                  </td> -->
               </tr>
             </tbody>
           </table>

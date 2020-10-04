@@ -22,6 +22,11 @@ import { AlmacennuevoComponent } from './almacen/almacennuevo.component';
 import { AlmaceneditComponent } from './almacen/almacenedit.component';
 import { DptoComponent } from './dpto/dpto.component';
 import { DptonuevoComponent } from './dpto/dptonuevo.component';
+import { SucursalComponent } from './sucursal/sucursal.component';
+import { SucursalnuevoComponent } from './sucursal/sucursalnuevo.component';
+import { SucursaleditComponent } from './sucursal/sucursaledit.component';
+import { CompraverComponent } from './compras/compraver.component';
+import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
 
 
 
@@ -32,15 +37,17 @@ const pagesRoutes: Routes = [
         component: PagesComponent,
         children: [
             { path: 'dashboard', component: DashboardComponent },
+
             { path: 'usuarios', component: UsuariosComponent },
+            { path: 'usuarios-nuevo', component: UsuarioNuevoComponent },
 
             { path: 'compras', component: ComprasComponent },
+            { path: 'comprasnuevo', component: ComprasnuevoComponent },
+            { path: 'compraver/:id', component: CompraverComponent },
 
             { path: 'producto', component: ProductoComponent },
             { path: 'productonuevo', component: ProductonuevoComponent },
             { path: 'producto-edit/:id', component: ProductoeditComponent },
-
-            { path: 'comprasnuevo', component: ComprasnuevoComponent },
 
             { path: 'proveedores', component: ProveedoresComponent },
             { path: 'proveedorcrear', component: ProveedorcrearComponent },
@@ -58,6 +65,10 @@ const pagesRoutes: Routes = [
             { path: 'dptos', component: DptoComponent },
             { path: 'dptos-nuevo', component: DptonuevoComponent },
             
+            { path: 'sucursal', component: SucursalComponent },
+            { path: 'sucursal-nuevo', component: SucursalnuevoComponent },
+            { path: 'sucursaleditar/:id', component: SucursaleditComponent },
+
             { path: 'profile', component: ProfileComponent },
 
             { path: 'account-settings', component: AccountSettingsComponent },

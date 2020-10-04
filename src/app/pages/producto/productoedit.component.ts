@@ -86,8 +86,8 @@ export class ProductoeditComponent implements OnInit {
   }
 
   guardar( producto: Producto ){
-    console.log('producto.ts: ', this.producto);
-    return;
+    // console.log('producto.ts: ', this.producto);
+    // return;
     Swal.fire({
       title: 'Esta seguro?',
       text: "Desea editar el producto existente?",
@@ -96,7 +96,7 @@ export class ProductoeditComponent implements OnInit {
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Borrar'
+      confirmButtonText: 'Aceptar'
     }).then((result) => {
       if (result.isConfirmed) {
         this.producto.nombre = producto.nombre;
@@ -105,7 +105,7 @@ export class ProductoeditComponent implements OnInit {
         this.producto.costo = producto.costo;
         this._productoService.editarProducto( this.producto )
             .subscribe( () => {
-                this.router.navigate( [ '/productos' ] );
+                this.router.navigate( [ '/producto' ] );
             } );
       }
     }) 
