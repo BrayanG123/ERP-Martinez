@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
 import { LoginComponent } from './login/login.component';
 import { PagesComponent } from './pages/pages.component';
+import { CrearcontraComponent } from './crearcontrasena/crearcontra.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
         component: PagesComponent,
         loadChildren: './pages/pages.module#PagesModule'
     },
+    { path: 'nueva-contraseña/:token', component: CrearcontraComponent },
     { path: '**', component: NopagefoundComponent },
 ];
 

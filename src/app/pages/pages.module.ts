@@ -38,6 +38,7 @@ import { SucursalnuevoComponent } from './sucursal/sucursalnuevo.component';
 import { SucursaleditComponent } from './sucursal/sucursaledit.component';
 import { CompraverComponent } from './compras/compraver.component';
 import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
+import { CrearcontraComponent } from './usuarios/crearcontra.component';
 
 
 
@@ -70,6 +71,7 @@ import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
         SucursaleditComponent,
         CompraverComponent,
         UsuarioNuevoComponent,
+        CrearcontraComponent,
     ],
     imports: [
         SharedModule,
@@ -81,7 +83,8 @@ import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
     ],
     exports: [
         DashboardComponent,
-        UsuariosComponent
+        UsuariosComponent,
+        AccountSettingsComponent
     ],
     
     

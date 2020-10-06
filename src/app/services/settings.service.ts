@@ -8,7 +8,7 @@ export class SettingsService {
 
   ajustes: Ajustes = {
     temaUrl: 'assets/css/colors/default.css',
-    tema: 'default'
+    theme: 'default'
   };
 
   constructor( @Inject(DOCUMENT) private _document ) { }
@@ -22,18 +22,18 @@ export class SettingsService {
     if ( localStorage.getItem('ajustes') ){
       this.ajustes = JSON.parse( localStorage.getItem('ajustes') );
       // console.log('Ajuste localStorage Cargado');
-      this.aplicarTema( this.ajustes.tema );
+      this.aplicarTema( this.ajustes.theme );
     }else{
       console.log('Usando valores por Defecto');
-      this.aplicarTema( this.ajustes.tema );
+      this.aplicarTema( this.ajustes.theme );
     }
   }
 
-  aplicarTema( tema:string ){
-    let url = `/assets/css/colors/${tema}.css`;
-    this._document.getElementById('tema').setAttribute('href', url);
+  aplicarTema( theme:string ){
+    let url = `/assets/css/colors/${theme}.css`;
+    this._document.getElementById('theme').setAttribute('href', url);
 
-    this.ajustes.tema = tema;
+    this.ajustes.theme = theme;
     this.ajustes.temaUrl = url;
     this.guardarAjustes();
   }
@@ -43,5 +43,5 @@ export class SettingsService {
 
 interface Ajustes {
   temaUrl: string;
-  tema: string;
+  theme: string;
 }

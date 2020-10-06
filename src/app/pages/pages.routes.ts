@@ -27,6 +27,7 @@ import { SucursalnuevoComponent } from './sucursal/sucursalnuevo.component';
 import { SucursaleditComponent } from './sucursal/sucursaledit.component';
 import { CompraverComponent } from './compras/compraver.component';
 import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
+import { CrearcontraComponent } from './usuarios/crearcontra.component';
 
 
 
@@ -38,10 +39,11 @@ const pagesRoutes: Routes = [
         children: [
             { path: 'dashboard', component: DashboardComponent },
 
-            { path: 'usuarios', component: UsuariosComponent },
+            { path: 'usuarios', component: CrearcontraComponent },
             { path: 'usuarios-nuevo', component: UsuarioNuevoComponent },
+            // { path: 'nueva-contraseña/:token', component: CrearcontraComponent },
 
-            { path: 'compras', component: ComprasComponent },
+            // { path: 'compras', component: ComprasComponent },
             { path: 'comprasnuevo', component: ComprasnuevoComponent },
             { path: 'compraver/:id', component: CompraverComponent },
 

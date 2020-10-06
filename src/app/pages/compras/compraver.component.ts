@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CProductos } from 'src/app/models/compproductos.model';
 
 import { Compra } from 'src/app/models/compras.model';
 import { ComprasService } from 'src/app/services/compras.service';
@@ -14,6 +15,7 @@ export class CompraverComponent implements OnInit {
 
   compra: Compra;
   public productos: [];
+  public productoscomprados: CProductos[];
   id = 0;
   public cargando: boolean = true;
 
@@ -37,14 +39,16 @@ export class CompraverComponent implements OnInit {
   }
 
   cargarData( compras:Compra[] ){
-    
-    
+    // let id1: Number;
+    // let id2: Number;
+    // return;
     for (let i = 0;  i < compras.length; i++) {
-      if ( compras[i].id === this.id ){      //wtf? el programa corre bien
-        // console.log('AQUI EL ID: ',compras[i].id);
-        // console.log('AQUI EL thisID: ', this.id );
+      // id1 = compras[i].id
+      if ( compras[i].id === this.id ){      
         this.compra = compras[i];
         console.log(this.compra);
+        // this.productoscomprados = this.compra.productos;
+        // console.log(this.compra.products);
         // this.productos = this.compra.products;
         
         break;

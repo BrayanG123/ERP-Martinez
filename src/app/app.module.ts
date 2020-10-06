@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CrearcontraComponent } from './crearcontrasena/crearcontra.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     // PagesComponent,
     FooterComponent,
     LoginComponent,
+    CrearcontraComponent,
   ],
   imports: [
     APP_ROUTES,
