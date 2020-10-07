@@ -30,6 +30,7 @@ export class CrearcontraComponent implements OnInit {
 
   ingresar( f:any ){
     // console.log('el token: ', this.token);
+    // return;
     console.log('el f: ', f.value.password);
     this.contrasena = f.value.password;
     this._usuarioService.crearContrasena( this.contrasena, this.token )

@@ -13,7 +13,7 @@ import { Usuariocrear } from "../models/usuariocrear.model";
 })
 export class UsuarioService {
   usuario: Usuario = new Usuario("", "", "", "", "", "");
-  token: string;
+  access_token: string;
 
   constructor(public http: HttpClient, public router: Router) {}
 
@@ -25,7 +25,7 @@ export class UsuarioService {
         // console.log("La respuestaaa: ", resp);
         console.log(resp.role_id);
         console.log(resp.role_name);
-        this.guardarStorage(resp.role_id, resp.access_token, resp.role_name);
+        this.guardarStorage( resp.access_token, resp.role_name);
         console.log("exito en login");
         console.log(resp);
         return true;
@@ -39,20 +39,20 @@ export class UsuarioService {
     );
   }
 
-  guardarStorage(id: string, token: string, role: string) {
-    localStorage.setItem("id", id);
-    localStorage.setItem("token", token);
+  guardarStorage( access_token: string, role: string) {
+    // localStorage.setItem("id", id);
+    localStorage.setItem("access_token", access_token);
     localStorage.setItem("role", role);
-    console.log("guardarStorage: ", id);
-    console.log("guardarStorage: ", role);
-    this.usuario._id = id;
+    // console.log("guardarStorage: ", id);
+    // console.log("guardarStorage: ", role);
+    // this.usuario._id = id;
     this.usuario.role = role;
-    this.token = token;
+    this.access_token = access_token;
     console.log(this.usuario);
   }
 
   estalogeado() {
-    return this.token.length > 5 ? true : false;
+    return this.access_token.length > 5 ? true : false;
   }
 
   crearUsuario(usuario: Usuariocrear) {
@@ -87,11 +87,12 @@ export class UsuarioService {
 
     var reqHeader = new HttpHeaders({
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-      Accept: "application/json",
+      "Authorization": `Bearer ${token}`,
+      "Accept": "application/json",
     });
-
-    return this.http.put(url, contrasena, { headers: reqHeader }).pipe(
+    // console.log('lo que le llega al Servicio: ', contrasena);
+    // console.log('lo que le llega al Servicio: ', token);
+    return this.http.put(url, {'password': contrasena} , { headers: reqHeader }).pipe(
       map((resp: any) => {
         console.log("Crear_contrasena (service): ", resp);
         // console.log(resp.role_id);

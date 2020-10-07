@@ -1,4 +1,5 @@
 import { Compraprod } from "./compraprod.model";
+import { Arreglo } from './arreglo.model';
 
 export class Compra {
   constructor(
@@ -6,6 +7,6 @@ export class Compra {
     public deposit_id: number,
     public productos: Compraprod[],
     public id?: Number,
-    products?: string
+    public products?: Arreglo[]
   ) {}
 }

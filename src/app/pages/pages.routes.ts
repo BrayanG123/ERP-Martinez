@@ -29,6 +29,8 @@ import { CompraverComponent } from './compras/compraver.component';
 import { UsuarioNuevoComponent } from './usuarios/usuario-nuevo.component';
 import { CrearcontraComponent } from './usuarios/crearcontra.component';
 
+import { AuthGuard } from '../guards/auth.guard';
+
 
 
 
@@ -36,6 +38,7 @@ const pagesRoutes: Routes = [
     {
         path: '',
         component: PagesComponent,
+        canActivate: [ AuthGuard ],
         children: [
             { path: 'dashboard', component: DashboardComponent },
 
@@ -43,7 +46,7 @@ const pagesRoutes: Routes = [
             { path: 'usuarios-nuevo', component: UsuarioNuevoComponent },
             // { path: 'nueva-contraseña/:token', component: CrearcontraComponent },
 
-            // { path: 'compras', component: ComprasComponent },
+            { path: 'compras', component: ComprasComponent },
             { path: 'comprasnuevo', component: ComprasnuevoComponent },
             { path: 'compraver/:id', component: CompraverComponent },
 
